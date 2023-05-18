@@ -1,0 +1,5 @@
+<li *ngFor="let character of characters">
+  <img src="{{ character.image }}" alt="" />
+  <h1>{{ character.name }}</h1>
+  <a [routerLink]="['characters', character.id]"> Sobre </a>
+</li>
