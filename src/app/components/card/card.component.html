@@ -1,5 +1,19 @@
-<li *ngFor="let character of characters">
-  <img src="{{ character.image }}" alt="" />
-  <h1>{{ character.name }}</h1>
-  <a [routerLink]="['characters', character.id]"> Sobre </a>
-</li>
+<ul class="flex flex-row items-center justify-between gap-1 overflow-x-scroll">
+  <li
+    class="flex flex-col items-center gap-2 min-w-[12rem] h-fit p-4"
+    *ngFor="let character of characters"
+  >
+    <img
+      class="w-max object-cover rounded-sm"
+      src="{{ character.image }}"
+      alt=""
+    />
+    <h1 class="text-sm">{{ character.name }}</h1>
+    <a
+      class="p-2 text-base text-white bg-green-400 rounded-full"
+      [routerLink]="['characters', character.id]"
+    >
+      Sobre
+    </a>
+  </li>
+</ul>

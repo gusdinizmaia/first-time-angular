@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from 'src/services/api';
-import { iCharacter } from 'src/environments';
+import { iCharacter } from 'src/models';
 
 @Component({
   selector: 'app-card',

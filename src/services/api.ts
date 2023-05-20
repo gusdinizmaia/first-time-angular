@@ -1,5 +1,6 @@
-import { api, iCharacter } from 'src/environments';
+import { api } from 'src/environments';
 import { Injectable } from '@angular/core';
+import { iCharacter } from 'src/models';
 
 @Injectable({
   providedIn: 'root',
