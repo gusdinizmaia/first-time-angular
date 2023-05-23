@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-5">
+  <figure class="flex flex-col">
+    <img
+      class="w-1/2 self-center"
+      src="{{ character.image }}"
+      alt="Perfil do personagem"
+    />
+  </figure>
+  <div class="w-full flex flex-col gap-2">
+    <h1 class="text-3xl text-gray-100 text-center p-5">
+      {{ character.name }}
+    </h1>
+    <h3 class="text-base text-gray-200">Estado: {{ character.status }}</h3>
+    <p class="text-base text-gray-200">Espécie: {{ character.species }}</p>
+    <p class="text-base text-gray-200">Gênero: {{ character.gender }}</p>
+    <p class="text-base text-gray-200">Origem: {{ character.origin?.name }}</p>
+    <button
+      class="text-base p-3 self-center mt-3 bg-green-300 rounded-xl text-gray-500 hover:bg-green-600 delay-300"
+    >
+      <a [routerLink]="['']">Voltar</a>
+    </button>
+  </div>
+</div>
