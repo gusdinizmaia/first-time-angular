@@ -5,5 +5,5 @@ export interface iCharacter {
   status: string;
   species: string;
   gender: string;
-  origin: any;
+  origin: { name: string; url: string };
 }

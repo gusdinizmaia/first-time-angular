@@ -4,13 +4,13 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContentComponent } from './pages/content/content.component';
 
 const routes: Routes = [
-  { path: '**', component: HomeComponent },
   { path: '', component: HomeComponent },
-  { path: 'characters/:id', component: ContentComponent },
+  { path: 'character/:id', component: ContentComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

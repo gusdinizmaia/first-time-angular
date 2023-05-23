@@ -1,17 +1,22 @@
-<ul class="flex flex-row items-center justify-between gap-1 overflow-x-scroll">
+<ul
+  class="flex flex-row items-center justify-between gap-1 pb-8 overflow-scroll overscroll-auto"
+>
   <li
-    class="flex flex-col items-center gap-2 min-w-[12rem] h-fit p-4"
+    class="flex flex-col items-center gap-2 min-w-[12rem] h-fit p-4 bg-[url(/assets/img/portal.jpg)] border-gray-500 border-2"
     *ngFor="let character of characters"
   >
-    <img
-      class="w-max object-cover rounded-sm"
-      src="{{ character.image }}"
-      alt=""
-    />
-    <h1 class="text-sm">{{ character.name }}</h1>
+    <figure>
+      <img
+        class="border-gray-500 border-1 w-max object-cover rounded-sm"
+        src="{{ character.image }}"
+        alt=""
+      />
+    </figure>
+
+    <h1 class="text-sm text-gray-100">{{ character.name }}</h1>
     <a
       class="p-2 text-base text-white bg-green-400 rounded-full"
-      [routerLink]="['characters', character.id]"
+      [routerLink]="['/character', character.id]"
     >
       Sobre
     </a>

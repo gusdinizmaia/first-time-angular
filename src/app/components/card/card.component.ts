@@ -12,7 +12,7 @@ import { iCharacter } from 'src/models';
   imports: [CommonModule, RouterModule],
 })
 export class CardComponent implements OnInit {
-  characters?: iCharacter[];
+  characters = [] as iCharacter[];
 
   constructor(private api: DataService) {}
 
